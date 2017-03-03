@@ -1,0 +1,23 @@
+ <h2 class="page-header">Create Your Portfolio</h2>
+ {{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+<form method="post" action="/port/portfolio"  enctype="multipart/form-data">
+   <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Name" name="name">
+   </div>
+  <p>Add at least one Work</p>  
+  <div class="form-group">
+    <label>Add Link of your work </label>
+    <input type="text" class="form-control" name="link">
+  </div>
+   <div class="form-group">
+   <label class="form-control"> Add a Screenshot of your work</label>
+  <input type="file" name="sc" class="form-control" >
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

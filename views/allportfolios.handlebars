@@ -1,0 +1,36 @@
+ <h2 class="page-header">All Portfolios</h2>
+
+ <body>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+            {{#each portfolios}}
+            	
+            	 <br>
+            	 <label> Name: </label>
+                 <label> {{name}} </label>
+                 <br>
+               {{#each this.work}}
+                      {{#if this.kind}}
+                      
+                      <label>ScreenShot</label>
+                      <br>
+                      <br>
+             <img src="/uploads/{{link}}" alt="no image" style="width:250px;height:250px;">
+                    <br>
+                    <br>
+                       {{else}} 
+                       <br> 
+                      <label> Link: </label>
+                      <label> {{link}} </label>
+                      <br>
+                       {{/if}}
+                    
+                    {{/each}}
+                    <label>-------------------------------------------------------------------</label>
+                {{/each}}
+                </div>
+            </div>
+    </div>
+
+</html>

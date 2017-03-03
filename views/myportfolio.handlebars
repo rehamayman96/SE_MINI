@@ -1,0 +1,25 @@
+ <h2 class="page-header">My Portfolio</h2>
+
+
+<body>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+               {{#each projects }}
+                      {{#if this.kind}}
+                      <label>ScreenShot</label>
+                      <br>
+                      <br>
+             <img src="/uploads/{{link}}" alt="no image" style="width:150px;height:150px;">
+                    <br>
+                    <br>
+                       {{else}}  
+                      <label> Link: </label>
+                      <label> {{link}} </label>
+                       {{/if}}
+                    </div>
+                {{/each}}
+            </div>
+    </div>
+
+</html>
