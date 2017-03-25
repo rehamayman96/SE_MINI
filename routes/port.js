@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
-var upload = multer({dest: '/home/reham/Desktop/se_mini/public/uploads' });
+var upload = multer({dest: './public/uploads' });
 var Portfolio = require('../models/portfolio');
 
 // Go to Portfolio
